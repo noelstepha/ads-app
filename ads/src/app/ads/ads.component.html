@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-list>
+        <mat-list-item *ngFor="let ad of ads?.contents; last as last">
+          <h2 mat-line>{{ ad.ad_headline }}</h2>
+          <p mat-line> {{ ad.ad_text }} </p>
+          <p mat-line> {{ ad.ad_price | currency }} </p>
+          <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+        </mat-list-item>
+    </mat-list>
+  </mat-card>
