@@ -3,4 +3,5 @@ export interface Ad {
     ad_headline : string;
     ad_text : string;
     ad_price : number;
+    images : [ { image : string }];
 }

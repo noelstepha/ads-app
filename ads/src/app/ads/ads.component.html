@@ -1,6 +1,6 @@
 <mat-card>
     <mat-list>
-        <mat-list-item *ngFor="let ad of ads?.contents; last as last">
+        <mat-list-item *ngFor="let ad of ads?.contents; last as last" (click)="onClickAd(ad)">
           <h2 mat-line>{{ ad.ad_headline }}</h2>
           <p mat-line> {{ ad.ad_text }} </p>
           <p mat-line> {{ ad.ad_price | currency }} </p>

@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { AdComponent } from './ad/ad.component';
 import { AdsComponent } from "./ads/ads.component";
 import { AdsResolver } from "./ads/ads.resolver";
+import { AdResolver } from "./ad/ad.resolver";
 
 export const appRoutes: Routes = [
     {
@@ -14,7 +15,10 @@ export const appRoutes: Routes = [
     },
     {
         path: 'ad/:id',
-        component: AdComponent
+        component: AdComponent,
+        resolve: {
+            ad: AdResolver
+        }
     },
     {
         path: '',
